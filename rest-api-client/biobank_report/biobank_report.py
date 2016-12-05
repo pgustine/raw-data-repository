@@ -22,15 +22,17 @@ def printrow(row):
 
 def generate_report():
   q = c.query(kind='BiobankOrder', order=['created'], filters=[['created', '>=', DRY_RUN_START]])
-  printrow(['biobank_id', 'biobank_order_id', 'test_label', 'finalized_time'])
+  printrow(['biobank_id', 'biobank_order_id', 'test_label', 'collected_time'])
   for r in q.fetch():
     if 'samples' not in r: continue
+    if BIOBANK_ID_SYSTEM not in r['identifier.system']:
+        continue
     biobank_order_id = r['identifier.value'][r['identifier.system'].index(BIOBANK_ID_SYSTEM)]
     for s in r['samples']:
       if s['finalized']:
         parent = get_participant(r.key.parent)
         if parent['biobank_id']:
-          row = (parent['biobank_id'], biobank_order_id, s['test'], s['finalized'].isoformat())
+          row = (parent['biobank_id'], biobank_order_id, s['test'], s['collected'].isoformat())
           printrow(row)
 
 if __name__ == '__main__':

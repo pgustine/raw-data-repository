@@ -49,7 +49,7 @@ for k in sorted(set(sent_samples.keys() + received_samples.keys())):
   if k in sent_samples:
     sample = sent_samples[k]
     sent_test = test_label
-    sent_time = sample['finalized_time'][:10]
+    sent_time = sample['collected_time'][:10]
     sent_json = json.dumps(sample)
     sent_order_id = sample['biobank_order_id']
 
