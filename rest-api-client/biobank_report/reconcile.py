@@ -36,7 +36,7 @@ def print_row(r, file=None):
   print("\t".join([str(e) for e in r]), file=file)
 
 #print_row(["biobank_id", "sent_order_id", "sent_test", "sent_time", "received_test", "received_time", "test_match", "date_match", "sent_json", "received_json"], report)
-print_row(["biobank_id", "sent_order_id", "sent_test", "sent_time", "received_test", "received_time", "test_match", "date_match"], report)
+print_row(["biobank_id", "sent_order_id", "site_id", "sent_test", "sent_time", "received_test", "received_time", "test_match", "date_match"], report)
 for k in sorted(set(sent_samples.keys() + received_samples.keys())):
   biobank_id = k[0]
   test_label = k[1]
@@ -45,6 +45,7 @@ for k in sorted(set(sent_samples.keys() + received_samples.keys())):
   sent_time = ""
   received_test = ""
   received_time = ""
+  site_id = ""
 
   if k in sent_samples:
     sample = sent_samples[k]
@@ -52,6 +53,7 @@ for k in sorted(set(sent_samples.keys() + received_samples.keys())):
     sent_time = sample['collected_time'][:10]
     sent_json = json.dumps(sample)
     sent_order_id = sample['biobank_order_id']
+    site_id = sample['site_id']
 
   if k in received_samples:
     sample = received_samples[k]
@@ -62,5 +64,5 @@ for k in sorted(set(sent_samples.keys() + received_samples.keys())):
   test_match = sent_test and (sent_test == received_test)
   date_match = sent_time and (sent_time == received_time)
   #row = [biobank_id, sent_order_id, sent_test, sent_time, received_test, received_time, test_match, date_match, sent_json, received_json]
-  row = [biobank_id, sent_order_id, sent_test, sent_time, received_test, received_time, test_match, date_match]
+  row = [biobank_id, sent_order_id, site_id, sent_test, sent_time, received_test, received_time, test_match, date_match]
   print_row(row, report)
