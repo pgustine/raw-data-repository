@@ -1,13 +1,15 @@
 from google.cloud import datastore
 import datetime
 import sys
+import os
 
 """Biobank report generator
 Runs locally, after "gcloud beta auth application-default login"
 with an account that has access to the staging environment"""
 
 PROJECT = 'all-of-us-rdr-staging'
-DRY_RUN_START = datetime.datetime(2017, 1, 29)
+START_DATE = os.environ['DRY_RUN_START']
+DRY_RUN_START = datetime.datetime.strptime(START_DATE, "%Y-%m-%d" )
 BIOBANK_ID_SYSTEM = 'https://orders.mayomedicallaboratories.com'
 SITE_ID_SYSTEM = 'https://www.pmi-ops.org/mayolink-site-id'
 
