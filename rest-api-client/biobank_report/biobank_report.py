@@ -7,7 +7,7 @@ import os
 Runs locally, after "gcloud beta auth application-default login"
 with an account that has access to the staging environment"""
 
-PROJECT = 'all-of-us-rdr-staging'
+PROJECT = 'all-of-us-rdr-dryrun'
 START_DATE = os.environ['DRY_RUN_START']
 DRY_RUN_START = datetime.datetime.strptime(START_DATE, "%Y-%m-%d" )
 BIOBANK_ID_SYSTEM = 'https://orders.mayomedicallaboratories.com'
