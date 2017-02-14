@@ -5,7 +5,7 @@ import os
 
 """Biobank report generator
 Runs locally, after "gcloud beta auth application-default login"
-with an account that has access to the staging environment"""
+with an account that has access to the dryrun environment"""
 
 PROJECT = 'all-of-us-rdr-dryrun'
 START_DATE = os.environ['DRY_RUN_START']
