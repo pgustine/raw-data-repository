@@ -28,6 +28,7 @@ PITT,PITT_UPMC,University of Pittsburgh Medical Center
 QTC,QTC_QTC,QTC
 QTC,QTC_QTC_NEW_MEXICO,QTC
 QTC,QTC_QTC_TEXAS,QTC
+QTC,QTC_QTC_LOUISIANA,QTC
 QUEST,QUEST_QUEST,Quest Labs
 QUEST,QUEST_MARYLAND,Quest Labs
 QUEST,QUEST_DC,Quest Labs
@@ -38,7 +39,7 @@ SEEC,SEEC_UF,University of Florida
 SEEC,SEEC_MOREHOUSE,Morehouse School of Medicine
 SEEC,SEEC_MIAMI,University of Miami
 SOUTHERN,SOUTHERN_UAB,University of Alabama Birmingham
-SOUTHERN,SOUTHERN_UASB,University of Alabama South Birmingham
+SOUTHERN,SOUTHERN_UASB,University of South Alabama
 SOUTHERN,SOUTHERN_HUNTSVILLE,Huntsville Hospital
 SOUTHERN,SOUTHERN_UAB_MONTGOMERY,University of Alabama Birmingham Montgomery
 SOUTHERN,SOUTHERN_UMC_TUSCALOOSA,University Medical Center Tuscaloosa
@@ -52,7 +53,7 @@ TEST,TEST_PROD,Test Prod Organization
 TRANS_AM,TRANS_AM_HENRY_FORD,Henry Ford Health System
 TRANS_AM,TRANS_AM_SPECTRUM,Spectrum Health System
 TRANS_AM,TRANS_AM_BAYLOR,Baylor Health Care System
-TRANS_AM,TRANS_AM_MEYERS,Meyers Primary Care Institute 
+TRANS_AM,TRANS_AM_MEYERS,Reliant Medical Group (Meyers Primary Care)
 TRANS_AM,TRANS_AM_ESSENTIA,Essentia Health
 VA,VA_BOSTON_VAMC,VA Boston Healthcare System
 VA,VA_PALO_ALTO_VAMC,VA Palo Alto Health Care System
